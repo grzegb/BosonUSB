@@ -17,18 +17,18 @@ How to use it:
 --------------
 ```
  BosonUSB [-r][-y][-z [2..4]][-s [bBv]][-f name][-d [num]]
-	r	      : raw16 bits video input (default)
-	y	      : agc-8 bits video input
+	r	  : raw16 bits video input (default)
+	y	  : agc-8 bits video input
 	z [2..4]  : zoom factor
 	f <name>  : record TIFFS in Folder <name>
 	s [bBv]   : camera size : b=boson320, B=boson640, v=video 640x480
 	d [num]   : linux video port
 
-./BosonUSB               ->	opens Boson320 /dev/video0	 in RAW16 mode
-./BosonUSB -r            ->	opens Boson320 /dev/video0	 in RAW16 mode
-./BosonUSB -y            -> opens Boson320 /dev/video0	 in AGC-8bits mode
-./BosonUSB -sB -d1       -> opens Boson640 /dev/video1  in RAW16 mode
-./BosonUSB -sB -y -d2    -> opens Boson640 /dev/video2  in AGC-8bits mode
+./BosonUSB               -> opens Boson320 /dev/video0 in RAW16 mode
+./BosonUSB -r            -> opens Boson320 /dev/video0 in RAW16 mode
+./BosonUSB -y            -> opens Boson320 /dev/video0 in AGC-8bits mode
+./BosonUSB -sB -d1       -> opens Boson640 /dev/video1 in RAW16 mode
+./BosonUSB -sB -y -d2    -> opens Boson640 /dev/video2 in AGC-8bits mode
 ./BosonUSB -f cap        -> creates a folder named 'cap' and inside TIFF files (raw16, agc, yuv) will be located.
 ```
 ----------
