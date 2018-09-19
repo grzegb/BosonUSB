@@ -1,0 +1,18 @@
+
+CXXFLAGS += -g -O0 -std=c++11 -Wall
+
+CXXFLAGS += $(shell pkg-config --cflags opencv)
+LDFLAGS  += $(shell pkg-config --libs opencv)
+
+SRCS += BosonUSB
+
+OBJS = $(addsuffix .o, $(SRCS))
+
+%.o : %.cpp
+	$(CXX) -c $(CXXFLAGS) $(CPPFLAGS) $< -o $@
+
+BosonUSB : $(OBJS)
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+clean:
+	rm -f BosonUSB $(OBJS)
